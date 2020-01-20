@@ -1,3 +1,5 @@
+# I learnt that: Slicing in lists
+
 def reverse(n):
     n_str = str(n)
     # a[start:stop:step] -> slice operator
