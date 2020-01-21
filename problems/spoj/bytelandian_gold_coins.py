@@ -9,19 +9,21 @@
 from sys import stdin
 from math import floor
 
-dp_list = [None]*int(100000) # check memory limits of the judge
+dp_list = [None] * int(100000)  # check memory limits of the judge
+
 
 def max_return(n):
-    if(n < 10):
+    if (n < 10):
         return n
     if n < 100000:
         if dp_list[n] is not None:
             return dp_list[n]
         else:
-            dp_list[n] = max(n, max_return(floor(n/2))+max_return(floor(n/3))+max_return(floor(n/4)))
+            dp_list[n] = max(n, max_return(floor(n / 2)) + max_return(floor(n / 3)) + max_return(floor(n / 4)))
             return dp_list[n]
 
-    return max(n, max_return(floor(n/2))+max_return(floor(n/3))+max_return(floor(n/4)))
+    return max(n, max_return(floor(n / 2)) + max_return(floor(n / 3)) + max_return(floor(n / 4)))
+
 
 def main():
     # Two methods to read input for this problem
@@ -42,12 +44,15 @@ def main():
 
     # Method to read input from stdin if we dont know how much
     # input is there
-    for line in stdin:
-        if line == '':  # If empty string is read then stop the loop
-            break
-        n = int(line.rstrip()) # removes all whitespaces from the end of line
-        value = max_return(n)
-        print(value)
+
+    if not method1:
+        for line in stdin:
+            if line == '':  # If empty string is read then stop the loop
+                break
+            n = int(line.rstrip())  # removes all whitespaces from the end of line
+            value = max_return(n)
+            print(value)
+
 
 if __name__ == "__main__":
     main()
