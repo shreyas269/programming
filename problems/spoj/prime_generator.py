@@ -1,4 +1,7 @@
-# I learnt that: First work out the algorithm completely in your mind and paper and then only start to code
+# I learnt that:
+# First work out the algorithm completely in your mind and paper and then only start to code
+# variables inside 'if' are scoped to function, class or module unlike C
+# Seive and Segseive methods
 
 from math import sqrt,ceil
 
