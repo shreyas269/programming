@@ -86,7 +86,16 @@ Objects and Classes :
 # When you call a method you don't need to pass anything to self parameter, python automatically does that for you
 # behind the scenes. i.e. self parameter is automatically passed if you haven't explicitly
 
-3. Private fields in a class
+3. Underscore usage in variable names and methods
+Notes:
+    1. _var or _methods aren't imported during wildcard imports. (Indicates the variable is for internal use - Programmer's perspective)
+    2. __var or __method names are mangled with and cannot be accessed with the same names. Helps to prevent overriding the child variables or methods.
+    3. There are no real real private attributes in Python like Java does
+    4. _ (Single underscores) are don't cares
+    5. __special_methods__ (Double underscores at start and end with special names such as init in between are reserved for magic methods)
+    6. var_ (Used to avoid naming conflicts with reserved keywords)
+
+    Pseudo Private fields in a class
 
     class BankAccount :
         # constructor
