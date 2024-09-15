@@ -42,9 +42,19 @@ This document is incomplete for now and still being updated. It's hard to keep i
     * Like lists but immutable
 5. Dictionary
     * mutable type
-    * Usage: `{}`
+    * Usage: `{:}`
     * key-value pairs - `{k1:v1, k2:v2}`
     * Like maps in C++
+    * Average case time complexity for lookup, insertion, deletion - O(1). Uses hash table under the hood.
+    * Worst case time complexity - O(n)
+6. Sets
+    * mutable type
+    * Usage: {}
+    * Unordered list of elements - `{e1, e1, ...}`
+    * Contains unique elements
+    * Average case time complexity for lookup, insertion, deletion - O(1)
+    * Worst case time complexity - O(n)
+
     
 ## Commonly used built-in functions:
 1. `type(var)` - get the type
